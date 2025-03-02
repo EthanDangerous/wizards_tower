@@ -1,3 +1,6 @@
 {
-  "item.wizardstower.animusgem": "Animus Gem"
+  "item.wizardstower.animusgem": "Animus Gem",
+
+  "block.wizardstower.towerwood": "Towerwood",
+  "block.wizardstower.magestone": "Magestone"
 }

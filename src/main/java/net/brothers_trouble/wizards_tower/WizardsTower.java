@@ -1,8 +1,8 @@
 package net.brothers_trouble.wizards_tower;
 
 import com.mojang.logging.LogUtils;
+import net.brothers_trouble.wizards_tower.block.ModBlocks;
 import net.brothers_trouble.wizards_tower.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +34,7 @@ public class WizardsTower {
         modEventBus.addListener(this::commonSetup);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -55,6 +56,11 @@ public class WizardsTower {
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.ANIMUSGEM);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.TOWERWOOD);
+            event.accept(ModBlocks.MAGESTONE);
         }
     }
 
