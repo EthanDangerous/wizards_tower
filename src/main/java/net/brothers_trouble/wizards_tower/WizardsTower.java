@@ -60,7 +60,12 @@ public class WizardsTower {
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.TOWERWOOD);
+            event.accept(ModBlocks.TOWERWOODPLANKS);
             event.accept(ModBlocks.MAGESTONE);
+            event.accept(ModBlocks.MAGESTONEPILLAR);
+            event.accept(ModBlocks.MAGESTONEBRICKS);
+            event.accept(ModBlocks.SOURCERERSHROOM);
+            event.accept(ModBlocks.HEARTOFTHETOWER);
         }
     }
 

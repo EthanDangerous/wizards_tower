@@ -2,5 +2,10 @@
   "item.wizardstower.animusgem": "Animus Gem",
 
   "block.wizardstower.towerwood": "Towerwood",
-  "block.wizardstower.magestone": "Magestone"
+  "block.wizardstower.towerwoodplanks": "Towerwood Planks",
+  "block.wizardstower.magestone": "Magestone",
+  "block.wizardstower.magestonebricks": "Magestone Bricks",
+  "block.wizardstower.magestonepillar": "Magestone Pillar",
+  "block.wizardstower.sourcerershroom": "Sourcerershroom",
+  "block.wizardstower.heartofthetower": "Heart Of The Tower"
 }
