@@ -28,12 +28,21 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        dropSelf(ModBlocks.TOWERWOOD.get()); // Ensure this exists
+        dropSelf(ModBlocks.TOWERWOOD_PLANKS.get()); // Ensure this exists
+        dropSelf(ModBlocks.MAGESTONE.get()); // Ensure this exists
+        dropSelf(ModBlocks.MAGESTONE_PILLAR.get()); // Ensure this exists
+        dropSelf(ModBlocks.MAGESTONE_BRICKS.get()); // Ensure this exists
+        dropSelf(ModBlocks.SOURCERERSHROOM.get()); // Ensure this exists
+        dropSelf(ModBlocks.HEART_OF_THE_TOWER.get()); // Ensure this exists
+
         dropSelf(ModBlocks.TOWERWOOD_PLANK_STAIRS.get());
         this.add(ModBlocks.TOWERWOOD_PLANK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.TOWERWOOD_PLANK_SLAB.get()));
 
         dropSelf(ModBlocks.TOWERWOOD_PLANK_FENCE.get());
     }
+
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);

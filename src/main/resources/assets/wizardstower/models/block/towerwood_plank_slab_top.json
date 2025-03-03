@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "wizardstower:block/towerwood_planks",
-    "side": "wizardstower:block/towerwood_planks",
-    "top": "wizardstower:block/towerwood_planks"
-  }
-}
