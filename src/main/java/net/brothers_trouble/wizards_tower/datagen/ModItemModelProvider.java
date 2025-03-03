@@ -20,6 +20,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         fenceItem(ModBlocks.TOWERWOOD_PLANK_FENCE, ModBlocks.TOWERWOOD_PLANKS);
+        stairsItem(ModBlocks.TOWERWOOD_PLANK_STAIRS, ModBlocks.TOWERWOOD_PLANKS);
+        slabItem(ModBlocks.TOWERWOOD_PLANK_SLAB, ModBlocks.TOWERWOOD_PLANKS);
     }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
@@ -31,6 +33,28 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void fenceItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture",  ResourceLocation.fromNamespaceAndPath(WizardsTower.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void stairsItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                        mcLoc("block/stairs"))
+                .texture("top", ResourceLocation.fromNamespaceAndPath(WizardsTower.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()))
+                .texture("bottom", ResourceLocation.fromNamespaceAndPath(WizardsTower.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()))
+                .texture("side", ResourceLocation.fromNamespaceAndPath(WizardsTower.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void slabItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                        mcLoc("block/slab"))
+                .texture("top", ResourceLocation.fromNamespaceAndPath(WizardsTower.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()))
+                .texture("bottom", ResourceLocation.fromNamespaceAndPath(WizardsTower.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()))
+                .texture("side", ResourceLocation.fromNamespaceAndPath(WizardsTower.MOD_ID,
                         "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 

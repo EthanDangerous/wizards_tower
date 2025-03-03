@@ -1,3 +1,8 @@
 {
-  "parent": "tutorialmod:block/towerwood_plank_stairs"
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "wizardstower:block/towerwood_planks",
+    "side": "wizardstower:block/towerwood_planks",
+    "top": "wizardstower:block/towerwood_planks"
+  }
 }
