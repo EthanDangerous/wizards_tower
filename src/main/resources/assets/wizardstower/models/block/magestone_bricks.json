@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "wizardstower:block/towerwoodplanks"
+    "all": "wizardstower:block/magestone_bricks"
   }
 }

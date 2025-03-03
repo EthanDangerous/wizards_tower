@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    },
+    {
+      "item": "wizardstower:filled_animus_gem"
+    },
+    {
+      "item": "wizardstower:filled_animus_gem"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "wizardstower:tower_seeds"
+  }
+}

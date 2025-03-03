@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "wizardstower:item/animusgem"
+    "layer0": "wizardstower:item/animus_gem"
   }
 }

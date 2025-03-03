@@ -2,8 +2,8 @@ package net.brothers_trouble.wizards_tower;
 
 import com.mojang.logging.LogUtils;
 import net.brothers_trouble.wizards_tower.block.ModBlocks;
+import net.brothers_trouble.wizards_tower.creative.ModCreativeModeTabs;
 import net.brothers_trouble.wizards_tower.item.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -33,6 +33,7 @@ public class WizardsTower {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
@@ -54,19 +55,13 @@ public class WizardsTower {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.ANIMUSGEM);
-        }
-
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
-            event.accept(ModBlocks.TOWERWOOD);
-            event.accept(ModBlocks.TOWERWOODPLANKS);
-            event.accept(ModBlocks.MAGESTONE);
-            event.accept(ModBlocks.MAGESTONEPILLAR);
-            event.accept(ModBlocks.MAGESTONEBRICKS);
-            event.accept(ModBlocks.SOURCERERSHROOM);
-            event.accept(ModBlocks.HEARTOFTHETOWER);
-        }
+//        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+//            event.accept(ModItems.ANIMUSGEM);
+//        }
+//
+//        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+//            event.accept(ModBlocks.TOWERWOOD);
+//        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
