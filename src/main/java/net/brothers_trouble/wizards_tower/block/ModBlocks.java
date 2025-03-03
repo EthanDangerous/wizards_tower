@@ -2,6 +2,9 @@ package net.brothers_trouble.wizards_tower.block;
 
 import net.brothers_trouble.wizards_tower.WizardsTower;
 import net.brothers_trouble.wizards_tower.block.custom.TowerCropBlock;
+import net.brothers_trouble.wizards_tower.block.custom.TowerDoorBottomBlock;
+import net.brothers_trouble.wizards_tower.block.custom.TowerDoorMiddleBlock;
+import net.brothers_trouble.wizards_tower.block.custom.TowerDoorTopBlock;
 import net.brothers_trouble.wizards_tower.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -58,8 +61,20 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(-1f, 3600000f).sound(SoundType.TRIAL_SPAWNER)));
 
-    public static final RegistryObject<Block> TOWER_CROP = BLOCKS.register("kohlrabi_crop",
+    public static final RegistryObject<Block> TOWER_CROP = BLOCKS.register("tower_crop",
             () -> new TowerCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> TOWER_DOOR_BOTTOM = registerBlock("tower_door_bottom",
+            () -> new TowerDoorBottomBlock(BlockBehaviour.Properties.of()
+                    .strength(-1f, 3600000f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> TOWER_DOOR_MIDDLE = registerBlock("tower_door_middle",
+            () -> new TowerDoorMiddleBlock(BlockBehaviour.Properties.of()
+                    .strength(-1f, 3600000f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> TOWER_DOOR_TOP = registerBlock("tower_door_top",
+            () -> new TowerDoorTopBlock(BlockBehaviour.Properties.of()
+                    .strength(-1f, 3600000f).sound(SoundType.WOOD)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

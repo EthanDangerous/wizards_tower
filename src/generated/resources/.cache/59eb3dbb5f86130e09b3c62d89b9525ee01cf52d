@@ -1,4 +1,4 @@
-// 1.21	2025-03-02T19:17:00.2566735	Loot Tables
+// 1.21	2025-03-03T12:46:03.8391481	Loot Tables
 244243ade3ccb6b46c1d2cd2a85a68db948f2cb9 data/wizardstower/loot_table/blocks/heart_of_the_tower.json
 04a1f9b359eeda34efcf6bec528dbb852d480aea data/wizardstower/loot_table/blocks/magestone.json
 0001b9776d321d0a42f59d2d82dbbe6bf87bf4c3 data/wizardstower/loot_table/blocks/magestone_bricks.json
@@ -9,3 +9,7 @@ e48feebf65bb80bce444c140776d47ebff3a3a9e data/wizardstower/loot_table/blocks/tow
 f5243864c7a6c801e2c6c8d0ab3a32e52523cf3f data/wizardstower/loot_table/blocks/towerwood_plank_fence.json
 e193c7c751cadb42bf35470cb133fda4b6a1ba0d data/wizardstower/loot_table/blocks/towerwood_plank_slab.json
 fe8d1ac62bee760c8e230906f4bd0d4ca0ab6a4d data/wizardstower/loot_table/blocks/towerwood_plank_stairs.json
+57918853dfff80d7188545ef441233d7cd1562cc data/wizardstower/loot_table/blocks/tower_crop.json
+cf86f903a9e8dad2fb708cf85b9146902837c0a2 data/wizardstower/loot_table/blocks/tower_door_bottom.json
+e21583b707019c22560bb628c9651216d052d648 data/wizardstower/loot_table/blocks/tower_door_middle.json
+658f6f2fe39a43c1758386a4080a97f6def1cd2f data/wizardstower/loot_table/blocks/tower_door_top.json

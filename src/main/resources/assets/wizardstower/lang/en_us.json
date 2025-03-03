@@ -17,5 +17,9 @@
   "block.wizardstower.towerwood_plank_stairs": "Towerwood Plank Stairs",
   "block.wizardstower.towerwood_plank_slab": "Towerwood Plank Slab",
 
-  "block.wizardstower.towerwood_plank_fence": "Towerwood Plank Fence"
+  "block.wizardstower.towerwood_plank_fence": "Towerwood Plank Fence",
+
+  "block.wizardstower.tower_door_bottom": "Towerwood Door Bottom",
+  "block.wizardstower.tower_door_middle": "Towerwood Door Middle",
+  "block.wizardstower.tower_door_top": "Towerwood Door Top"
 }

@@ -1,23 +1,25 @@
-[02Mar2025 21:18:00.149] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\ethan\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, wizardstower, --all, --output, C:\Users\ethan\OneDrive\Desktop\modding\wizards tower\src\generated\resources, --existing, C:\Users\ethan\OneDrive\Desktop\modding\wizards tower\src\main\resources]
-[02Mar2025 21:18:00.151] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.1+12-LTS
-[02Mar2025 21:18:00.152] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.1 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
-[02Mar2025 21:18:00.249] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[02Mar2025 21:18:00.359] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/ethan/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[02Mar2025 21:18:01.024] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[02Mar2025 21:18:01.640] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\ethan\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, wizardstower, --all, --output, C:\Users\ethan\OneDrive\Desktop\modding\wizards tower\src\generated\resources, --existing, C:\Users\ethan\OneDrive\Desktop\modding\wizards tower\src\main\resources]
-[02Mar2025 21:18:05.743] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
-[02Mar2025 21:18:05.744] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
-[02Mar2025 21:18:05.768] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[02Mar2025 21:18:06.318] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [wizardstower]
-[02Mar2025 21:18:06.390] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/ethan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[02Mar2025 21:18:06.391] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/ethan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
-[02Mar2025 21:18:06.639] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[02Mar2025 21:18:06.822] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 182 ms
-[02Mar2025 21:18:06.823] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id wizardstower
-[02Mar2025 21:18:06.828] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id wizardstower finished after 5 ms
-[02Mar2025 21:18:06.828] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: wizardstower
-[02Mar2025 21:18:06.836] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: wizardstower finished after 7 ms
-[02Mar2025 21:18:06.836] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: wizardstower
-[02Mar2025 21:18:06.925] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: wizardstower finished after 90 ms
-[02Mar2025 21:18:06.926] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 288 ms
-[02Mar2025 21:18:06.932] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 24, old count: 26, new count: 25, removed stale: 0, written: 2
+[03Mar2025 13:29:32.496] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\Ethan\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, wizardstower, --all, --output, C:\Users\Ethan\OneDrive\Desktop\modding\wizards_tower\src\generated\resources, --existing, C:\Users\Ethan\OneDrive\Desktop\modding\wizards_tower\src\main\resources]
+[03Mar2025 13:29:32.502] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.6+7-LTS
+[03Mar2025 13:29:32.505] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.6 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[03Mar2025 13:29:32.668] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[03Mar2025 13:29:32.842] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/Ethan/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[03Mar2025 13:29:34.196] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[03Mar2025 13:29:35.235] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\Ethan\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, wizardstower, --all, --output, C:\Users\Ethan\OneDrive\Desktop\modding\wizards_tower\src\generated\resources, --existing, C:\Users\Ethan\OneDrive\Desktop\modding\wizards_tower\src\main\resources]
+[03Mar2025 13:29:44.591] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[03Mar2025 13:29:44.591] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[03Mar2025 13:29:44.630] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[03Mar2025 13:29:45.578] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [wizardstower]
+[03Mar2025 13:29:45.668] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Ethan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[03Mar2025 13:29:45.669] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Ethan/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_parchment_2024.07.28-1.21/forge-1.21-51.0.33_mapped_parchment_2024.07.28-1.21.jar%230!/data/.mcassetsroot' uses unexpected schema
+[03Mar2025 13:29:45.897] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[03Mar2025 13:29:46.366] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 468 ms
+[03Mar2025 13:29:46.366] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id wizardstower
+[03Mar2025 13:29:46.378] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id wizardstower finished after 11 ms
+[03Mar2025 13:29:46.378] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id wizardstower
+[03Mar2025 13:29:46.379] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id wizardstower finished after 0 ms
+[03Mar2025 13:29:46.379] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: wizardstower
+[03Mar2025 13:29:46.391] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: wizardstower finished after 12 ms
+[03Mar2025 13:29:46.391] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: wizardstower
+[03Mar2025 13:29:46.556] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: wizardstower finished after 164 ms
+[03Mar2025 13:29:46.556] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 660 ms
+[03Mar2025 13:29:46.565] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 34, old count: 36, new count: 35, removed stale: 0, written: 3

@@ -40,6 +40,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MAGESTONE_PILLAR.get());
                         output.accept(ModBlocks.SOURCERERSHROOM.get());
                         output.accept(ModBlocks.HEART_OF_THE_TOWER.get());
+                        output.accept(ModBlocks.TOWER_DOOR_BOTTOM.get());
+                        output.accept(ModBlocks.TOWER_DOOR_MIDDLE.get());
+                        output.accept(ModBlocks.TOWER_DOOR_TOP.get());
                     })
                     .build());
 

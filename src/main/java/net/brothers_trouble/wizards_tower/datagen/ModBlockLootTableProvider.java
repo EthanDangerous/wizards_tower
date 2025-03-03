@@ -41,6 +41,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.TOWERWOOD_PLANK_SLAB.get()));
 
         dropSelf(ModBlocks.TOWERWOOD_PLANK_FENCE.get());
+        dropSelf(ModBlocks.TOWER_CROP.get());
+
+        dropSelf(ModBlocks.TOWER_DOOR_BOTTOM.get());
+        dropSelf(ModBlocks.TOWER_DOOR_MIDDLE.get());
+        dropSelf(ModBlocks.TOWER_DOOR_TOP.get());
     }
 
 

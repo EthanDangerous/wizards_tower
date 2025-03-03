@@ -1,4 +1,7 @@
-// 1.21	2025-03-02T21:18:06.9279063	Item Models: wizardstower
+// 1.21	2025-03-03T12:46:03.8371511	Item Models: wizardstower
 62b37eb03c849113c5329fc578aa4c629ae54607 assets/wizardstower/models/item/towerwood_plank_fence.json
 f55130b5232284cc6fcc37b6e1f78542f3ac2a4e assets/wizardstower/models/item/towerwood_plank_slab.json
 0821772549c2329388154ba4698a1a66e327b82e assets/wizardstower/models/item/towerwood_plank_stairs.json
+31be535a6de906514733fce93039444aefc92f2f assets/wizardstower/models/item/tower_door_bottom.json
+c2e096c71cb0b66f48adb96d8f74044d633b5803 assets/wizardstower/models/item/tower_door_middle.json
+c4b6097faf3d91ff773be4c5300bd77e16b4f0b3 assets/wizardstower/models/item/tower_door_top.json
