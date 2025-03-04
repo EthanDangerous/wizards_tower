@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "flipped=false": {
       "model": "wizardstower:block/tower_door_bottom"
+    },
+    "flipped=true": {
+      "model": "wizardstower:block/tower_door_bottom_flipped"
     }
   }
 }

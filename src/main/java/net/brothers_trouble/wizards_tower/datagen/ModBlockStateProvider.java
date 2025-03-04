@@ -2,10 +2,13 @@ package net.brothers_trouble.wizards_tower.datagen;
 
 import net.brothers_trouble.wizards_tower.WizardsTower;
 import net.brothers_trouble.wizards_tower.block.ModBlocks;
+import net.brothers_trouble.wizards_tower.block.custom.TowerDoorBottomBlock;
 import net.brothers_trouble.wizards_tower.item.ModItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -27,11 +30,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.TOWERWOOD_PLANK_SLAB);
 
         simpleBlockWithItem(ModBlocks.TOWER_DOOR_MIDDLE.get(), models().getExistingFile(modLoc("block/tower_door_middle")));
-        simpleBlockWithItem(ModBlocks.TOWER_DOOR_BOTTOM.get(), models().getExistingFile(modLoc("block/tower_door_bottom")));
+        flippingDoor();
         simpleBlockWithItem(ModBlocks.TOWER_DOOR_TOP.get(), models().getExistingFile(modLoc("block/tower_door_top")));
         simpleBlockWithItem(ModBlocks.TOWER_DOOR_MIDDLE_FLIPPED.get(), models().getExistingFile(modLoc("block/tower_door_middle_flipped")));
         simpleBlockWithItem(ModBlocks.TOWER_DOOR_BOTTOM_FLIPPED.get(), models().getExistingFile(modLoc("block/tower_door_bottom_flipped")));
         simpleBlockWithItem(ModBlocks.TOWER_DOOR_TOP_FLIPPED.get(), models().getExistingFile(modLoc("block/tower_door_top_flipped")));
+    }
+
+    private void flippingDoor() {
+        getVariantBuilder(ModBlocks.TOWER_DOOR_BOTTOM.get()).forAllStates(state -> {
+            if(state.getValue(TowerDoorBottomBlock.FLIPPED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("tower_door_bottom_flipped",
+                        ResourceLocation.fromNamespaceAndPath(WizardsTower.MOD_ID, "block/" + "tower_door_bottom_flipped")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("tower_door_bottom",
+                        ResourceLocation.fromNamespaceAndPath(WizardsTower.MOD_ID, "block/" + "tower_door_bottom")))};
+            }
+        });
+        simpleBlockItem(ModBlocks.TOWER_DOOR_BOTTOM.get(), models().cubeAll("tower_door_bottom",
+                ResourceLocation.fromNamespaceAndPath(WizardsTower.MOD_ID, "block/" + "tower_door_bottom")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
