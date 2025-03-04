@@ -46,6 +46,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.TOWER_DOOR_BOTTOM.get());
         dropSelf(ModBlocks.TOWER_DOOR_MIDDLE.get());
         dropSelf(ModBlocks.TOWER_DOOR_TOP.get());
+        dropSelf(ModBlocks.TOWER_DOOR_BOTTOM_FLIPPED.get());
+        dropSelf(ModBlocks.TOWER_DOOR_MIDDLE_FLIPPED.get());
+        dropSelf(ModBlocks.TOWER_DOOR_TOP_FLIPPED.get());
     }
 
 

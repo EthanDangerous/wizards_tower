@@ -16,10 +16,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class TowerDoorMiddleBlock extends Block {
-    private static final VoxelShape CUSTOM_SHAPE = Shapes.box(0, -1, 0, 1, 2, 1); // Custom hitbox
+public class TowerDoorBottomBlockFlipped extends Block {
+    private static final VoxelShape CUSTOM_SHAPE = Shapes.box(0, 0, 0, 1, 3, 1); // Custom hitbox
 
-    public TowerDoorMiddleBlock(Properties properties) {
+    public TowerDoorBottomBlockFlipped(Properties properties) {
         super(properties);
     }
 
@@ -29,16 +29,26 @@ public class TowerDoorMiddleBlock extends Block {
         return InteractionResult.SUCCESS;
     }
 
+    // ✅ Prevent placement if the two blocks above aren't air
+    @Override
+    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        return level.getBlockState(pos.above()).isAir() && level.getBlockState(pos.above(2)).isAir();
+    }
+
     // ✅ Automatically place middle and top blocks
     @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
         if (!level.isClientSide) {
-//            // Place middle block
+            // Place middle block
 //            level.setBlock(pos.above(), ModBlocks.TOWER_DOOR_MIDDLE.get().defaultBlockState(), 3);
 //            // Place top block
 //            level.setBlock(pos.above(2), ModBlocks.TOWER_DOOR_TOP.get().defaultBlockState(), 3);
-
-            level.playSound(null, pos, SoundEvents.WOOD_PLACE, SoundSource.BLOCKS, 1.0f, 1.0f);
+//
+//            level.setBlock(pos.south(), ModBlocks.TOWER_DOOR_BOTTOM_FLIPPED.get().defaultBlockState(), 3);
+//            level.setBlock(pos.above().south(), ModBlocks.TOWER_DOOR_MIDDLE_FLIPPED.get().defaultBlockState(), 3);
+//            level.setBlock(pos.above(2).south(), ModBlocks.TOWER_DOOR_TOP_FLIPPED.get().defaultBlockState(), 3);
+//
+//            level.playSound(null, pos, SoundEvents.WOOD_PLACE, SoundSource.BLOCKS, 1.0f, 1.0f);
         }
     }
 
@@ -46,22 +56,22 @@ public class TowerDoorMiddleBlock extends Block {
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!level.isClientSide && state.getBlock() != newState.getBlock()) {
             // Break the middle block if it exists
-            if (level.getBlockState(pos.above()).is(ModBlocks.TOWER_DOOR_TOP.get())) {
+            if (level.getBlockState(pos.above()).is(ModBlocks.TOWER_DOOR_MIDDLE_FLIPPED.get())) {
                 level.destroyBlock(pos.above(), false);
             }
             // Break the top block if it exists
-            if (level.getBlockState(pos.below()).is(ModBlocks.TOWER_DOOR_BOTTOM.get())) {
-                level.destroyBlock(pos.below(), false);
+            if (level.getBlockState(pos.above(2)).is(ModBlocks.TOWER_DOOR_TOP_FLIPPED.get())) {
+                level.destroyBlock(pos.above(2), false);
             }
 
-            if (level.getBlockState(pos.south()).is(ModBlocks.TOWER_DOOR_MIDDLE_FLIPPED.get())) {
-                level.destroyBlock(pos.south(), false);
+            if (level.getBlockState(pos.north()).is(ModBlocks.TOWER_DOOR_BOTTOM.get())) {
+                level.destroyBlock(pos.north(), false);
             }
-            if (level.getBlockState(pos.below().south()).is(ModBlocks.TOWER_DOOR_BOTTOM_FLIPPED.get())) {
-                level.destroyBlock(pos.below().south(), false);
+            if (level.getBlockState(pos.above().north()).is(ModBlocks.TOWER_DOOR_MIDDLE.get())) {
+                level.destroyBlock(pos.above().north(), false);
             }
-            if (level.getBlockState(pos.above().south()).is(ModBlocks.TOWER_DOOR_TOP_FLIPPED.get())) {
-                level.destroyBlock(pos.above().south(), false);
+            if (level.getBlockState(pos.above(2).north()).is(ModBlocks.TOWER_DOOR_TOP.get())) {
+                level.destroyBlock(pos.above(2).north(), false);
             }
 
             // Play breaking sound

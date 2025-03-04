@@ -25,6 +25,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.TOWER_DOOR_BOTTOM);
         simpleBlockItem(ModBlocks.TOWER_DOOR_MIDDLE);
         simpleBlockItem(ModBlocks.TOWER_DOOR_TOP);
+        simpleBlockItem(ModBlocks.TOWER_DOOR_BOTTOM_FLIPPED);
+        simpleBlockItem(ModBlocks.TOWER_DOOR_MIDDLE_FLIPPED);
+        simpleBlockItem(ModBlocks.TOWER_DOOR_TOP_FLIPPED);
     }
 
     public void buttonItem(RegistryObject<? extends Block> block, RegistryObject<Block> baseBlock) {

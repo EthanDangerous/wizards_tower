@@ -4,11 +4,14 @@ import net.brothers_trouble.wizards_tower.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -18,6 +21,12 @@ public class TowerDoorTopBlock extends Block {
 
     public TowerDoorTopBlock(Properties properties) {
         super(properties);
+    }
+
+    protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos,
+                                               Player pPlayer, BlockHitResult pHitResult) {
+        pLevel.playSound(pPlayer, pPos, SoundEvents.AMETHYST_CLUSTER_PLACE, SoundSource.BLOCKS, 1f, 1f);
+        return InteractionResult.SUCCESS;
     }
 
     // ✅ Prevent placement if the two blocks above aren't air
@@ -49,6 +58,16 @@ public class TowerDoorTopBlock extends Block {
             // Break the top block if it exists
             if (level.getBlockState(pos.below(2)).is(ModBlocks.TOWER_DOOR_BOTTOM.get())) {
                 level.destroyBlock(pos.below(2), false);
+            }
+
+            if (level.getBlockState(pos.south()).is(ModBlocks.TOWER_DOOR_TOP_FLIPPED.get())) {
+                level.destroyBlock(pos.south(), false);
+            }
+            if (level.getBlockState(pos.below().south()).is(ModBlocks.TOWER_DOOR_MIDDLE_FLIPPED.get())) {
+                level.destroyBlock(pos.below().south(), false);
+            }
+            if (level.getBlockState(pos.below().south(2)).is(ModBlocks.TOWER_DOOR_BOTTOM_FLIPPED.get())) {
+                level.destroyBlock(pos.below().south(2), false);
             }
 
             // Play breaking sound

@@ -29,6 +29,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.TOWER_DOOR_MIDDLE.get(), models().getExistingFile(modLoc("block/tower_door_middle")));
         simpleBlockWithItem(ModBlocks.TOWER_DOOR_BOTTOM.get(), models().getExistingFile(modLoc("block/tower_door_bottom")));
         simpleBlockWithItem(ModBlocks.TOWER_DOOR_TOP.get(), models().getExistingFile(modLoc("block/tower_door_top")));
+        simpleBlockWithItem(ModBlocks.TOWER_DOOR_MIDDLE_FLIPPED.get(), models().getExistingFile(modLoc("block/tower_door_middle_flipped")));
+        simpleBlockWithItem(ModBlocks.TOWER_DOOR_BOTTOM_FLIPPED.get(), models().getExistingFile(modLoc("block/tower_door_bottom_flipped")));
+        simpleBlockWithItem(ModBlocks.TOWER_DOOR_TOP_FLIPPED.get(), models().getExistingFile(modLoc("block/tower_door_top_flipped")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

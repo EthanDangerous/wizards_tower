@@ -8,7 +8,6 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
@@ -16,10 +15,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class TowerDoorMiddleBlock extends Block {
+public class TowerDoorMiddleBlockFlipped extends Block {
     private static final VoxelShape CUSTOM_SHAPE = Shapes.box(0, -1, 0, 1, 2, 1); // Custom hitbox
 
-    public TowerDoorMiddleBlock(Properties properties) {
+    public TowerDoorMiddleBlockFlipped(Properties properties) {
         super(properties);
     }
 
@@ -46,22 +45,22 @@ public class TowerDoorMiddleBlock extends Block {
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!level.isClientSide && state.getBlock() != newState.getBlock()) {
             // Break the middle block if it exists
-            if (level.getBlockState(pos.above()).is(ModBlocks.TOWER_DOOR_TOP.get())) {
+            if (level.getBlockState(pos.above()).is(ModBlocks.TOWER_DOOR_TOP_FLIPPED.get())) {
                 level.destroyBlock(pos.above(), false);
             }
             // Break the top block if it exists
-            if (level.getBlockState(pos.below()).is(ModBlocks.TOWER_DOOR_BOTTOM.get())) {
+            if (level.getBlockState(pos.below()).is(ModBlocks.TOWER_DOOR_BOTTOM_FLIPPED.get())) {
                 level.destroyBlock(pos.below(), false);
             }
 
-            if (level.getBlockState(pos.south()).is(ModBlocks.TOWER_DOOR_MIDDLE_FLIPPED.get())) {
-                level.destroyBlock(pos.south(), false);
+            if (level.getBlockState(pos.north()).is(ModBlocks.TOWER_DOOR_MIDDLE.get())) {
+                level.destroyBlock(pos.north(), false);
             }
-            if (level.getBlockState(pos.below().south()).is(ModBlocks.TOWER_DOOR_BOTTOM_FLIPPED.get())) {
-                level.destroyBlock(pos.below().south(), false);
+            if (level.getBlockState(pos.below().north()).is(ModBlocks.TOWER_DOOR_BOTTOM.get())) {
+                level.destroyBlock(pos.below().north(), false);
             }
-            if (level.getBlockState(pos.above().south()).is(ModBlocks.TOWER_DOOR_TOP_FLIPPED.get())) {
-                level.destroyBlock(pos.above().south(), false);
+            if (level.getBlockState(pos.above().north()).is(ModBlocks.TOWER_DOOR_TOP.get())) {
+                level.destroyBlock(pos.above().north(), false);
             }
 
             // Play breaking sound
