@@ -12,6 +12,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -28,9 +29,18 @@ import net.brothers_trouble.wizards_tower.block.ModBlocks;
 
 public class TowerDoorBottomBlock extends Block {
     private static final VoxelShape CUSTOM_SHAPE = Shapes.box(0, 0, 0, 1, 3, 1); // Custom hitbox
+    public static final BooleanProperty FLIPPED = BooleanProperty.create("flipped");
 
     public TowerDoorBottomBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.defaultBlockState().setValue(FLIPPED, false));
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos,
+                                               Player pPlayer, BlockHitResult pHitResult) {
+        pLevel.playSound(pPlayer, pPos, SoundEvents.AMETHYST_CLUSTER_PLACE, SoundSource.BLOCKS, 10f, 1f);
+        return InteractionResult.SUCCESS;
     }
 
     // ✅ Prevent placement if the two blocks above aren't air
@@ -50,6 +60,10 @@ public class TowerDoorBottomBlock extends Block {
 
             level.playSound(null, pos, SoundEvents.WOOD_PLACE, SoundSource.BLOCKS, 1.0f, 1.0f);
         }
+//        if(level.getBlockState(pos.north()).is(ModBlocks.TOWER_DOOR_BOTTOM.get()) || level.getBlockState(pos.east()).is(ModBlocks.TOWER_DOOR_BOTTOM.get()) || level.getBlockState(pos.south()).is(ModBlocks.TOWER_DOOR_BOTTOM.get()) || level.getBlockState(pos.west()).is(ModBlocks.TOWER_DOOR_BOTTOM.get())){
+//            boolean currentState = state.getValue(FLIPPED);
+//            level.setBlockAndUpdate(pos, state.setValue(FLIPPED, !currentState));
+//        }
     }
 
     @Override
@@ -76,5 +90,10 @@ public class TowerDoorBottomBlock extends Block {
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return CUSTOM_SHAPE;
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
+        pBuilder.add(FLIPPED);
     }
 }

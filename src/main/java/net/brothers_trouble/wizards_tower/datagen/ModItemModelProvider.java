@@ -22,7 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.TOWERWOOD_PLANK_FENCE, ModBlocks.TOWERWOOD_PLANKS);
         stairsItem(ModBlocks.TOWERWOOD_PLANK_STAIRS, ModBlocks.TOWERWOOD_PLANKS);
         slabItem(ModBlocks.TOWERWOOD_PLANK_SLAB, ModBlocks.TOWERWOOD_PLANKS);
-        simpleBlockItem(ModBlocks.TOWER_DOOR_BOTTOM);
+//        simpleBlockItem(ModBlocks.TOWER_DOOR_BOTTOM);
         simpleBlockItem(ModBlocks.TOWER_DOOR_MIDDLE);
         simpleBlockItem(ModBlocks.TOWER_DOOR_TOP);
     }
