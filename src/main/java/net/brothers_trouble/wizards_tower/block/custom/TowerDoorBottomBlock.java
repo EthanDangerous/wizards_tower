@@ -2,7 +2,9 @@ package net.brothers_trouble.wizards_tower.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
@@ -17,8 +19,11 @@ import net.minecraft.sounds.SoundSource;
 
 import net.brothers_trouble.wizards_tower.block.ModBlocks;
 
+import javax.annotation.Nullable;
+
 public class TowerDoorBottomBlock extends Block {
     private static final VoxelShape CUSTOM_SHAPE = Shapes.box(0, 0, 0, 1, 3, 1); // Custom hitbox
+    public LivingEntity owner;
 //    public String playerUUID;
 
     public TowerDoorBottomBlock(Properties properties) {
@@ -37,6 +42,10 @@ public class TowerDoorBottomBlock extends Block {
         return level.getBlockState(pos.above()).isAir() && level.getBlockState(pos.above(2)).isAir();
     }
 
+    public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack){
+        this.owner = placer;
+    }
+
     // ✅ Automatically place middle and top blocks
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean isMoving) {
         if (!level.isClientSide) {
@@ -52,7 +61,7 @@ public class TowerDoorBottomBlock extends Block {
 
             level.playSound(null, pos, SoundEvents.WOOD_PLACE, SoundSource.BLOCKS, 1.0f, 1.0f);
 
-//            System.out.println("PLAYER UUID = " + playerUUID);
+            System.out.println("OWNER = " + owner);
         }
     }
 
